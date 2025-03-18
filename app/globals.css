@@ -54,6 +54,9 @@ body {
   /* Background Images */
   --bg-auth-dark: url("/images/auth-dark.png");
   --bg-auth-light: url("/images/auth-light.png");
+
+  --font-inter: "Inter", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
 }
 
 @layer utilities {
