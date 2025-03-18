@@ -86,10 +86,7 @@ body {
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  /* Background Images */
-  --bg-auth-dark: url("/images/auth-dark.png");
-  --bg-auth-light: url("/images/auth-light.png");
-
+  /* Fonts  */
   --font-inter: "Inter", sans-serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
 }
@@ -108,7 +105,7 @@ body {
   }
 
   .background-light800_darkgradient {
-    @apply bg-light-800 dark:bg-[var(--color-dark-gradient)];
+    @apply bg-light-800 dark:bg-linear-(--dark-gradient);
   }
 
   .background-light800_dark400 {
@@ -301,6 +298,14 @@ body {
 
   .primary-gradient {
     background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
+  }
+
+  .dark-bg {
+    @apply bg-[url('/images/auth-dark.png')];
+  }
+
+  .light-bg {
+    @apply bg-[url('/images/auth-light.png')];
   }
 
   .dark-gradient {
