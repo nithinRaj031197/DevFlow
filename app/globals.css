@@ -105,7 +105,7 @@ body {
   }
 
   .background-light800_darkgradient {
-    @apply bg-light-800 dark:bg-linear-(--dark-gradient);
+    @apply bg-linear-(--dark-gradient);
   }
 
   .background-light800_dark400 {
