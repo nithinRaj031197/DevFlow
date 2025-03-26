@@ -10,8 +10,8 @@ body {
 
 :root {
   --radius: 8px;
-  --dark-gradient: linear-gradient(232deg, rgba(23, 28, 35, 0.41) 0%, rgba(19, 22, 28, 0.7) 100%);
-  --light-gradient: linear-gradient(132deg, rgba(247, 249, 255, 0.5) 0%, rgba(229, 237, 255, 0.25) 100%);
+  /* --dark-gradient: linear-gradient(232deg, rgba(23, 28, 35, 0.41) 0%, rgba(19, 22, 28, 0.7) 100%);
+  --light-gradient: linear-gradient(132deg, rgba(247, 249, 255, 0.5) 0%, rgba(229, 237, 255, 0.25) 100%); */
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -89,6 +89,9 @@ body {
   /* Fonts  */
   --font-inter: "Inter", sans-serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
+
+  --color-dark-gradient: rgba(23, 28, 35, 0.41);
+  --color-light-gradient: rgba(247, 249, 255, 0.5);
 }
 
 @layer utilities {
@@ -105,7 +108,7 @@ body {
   }
 
   .background-light800_darkgradient {
-    @apply bg-linear-(--dark-gradient);
+    @apply bg-light-800 dark:bg-dark-gradient;
   }
 
   .background-light800_dark400 {
@@ -309,11 +312,11 @@ body {
   }
 
   .dark-gradient {
-    @apply bg-linear-(--light-gradient);
+    @apply bg-light-gradient;
   }
 
   .light-gradient {
-    @apply bg-linear-(--dark-gradient);
+    @apply bg-dark-gradient;
   }
 
   .primary-text-gradient {
@@ -336,7 +339,7 @@ body {
   }
 
   .card-wrapper {
-    @apply bg-light-900 dark:bg-linear-(--dark-gradient) shadow-light-100 dark:shadow-dark-100;
+    @apply bg-light-800 dark:bg-dark-gradient shadow-light-100 dark:shadow-dark-100;
   }
 
   .btn {
